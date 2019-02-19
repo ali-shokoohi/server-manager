@@ -18,8 +18,11 @@ def handle(msg):
         if cmd == "/start":
             output = "Working ..."
             bot.sendMessage(chat_id=chat_id, text=output, reply_to_message_id=msg_id)
+        elif cmd == '/help':
+            output = "Show help message"
         else:
             pass #TODO: Handling other commands
+        bot.sendMessage(chat_id=chat_id, text=output, reply_to_message_id=msg_id)
     else:
         pass #TODO: Handling file messages
 
