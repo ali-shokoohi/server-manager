@@ -29,7 +29,6 @@ def write(user_id, first_name, last_name, user_name):
 	c.execute('''CREATE TABLE IF NOT EXISTS users (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, user_id TEXT NOT NULL, username TEXT NOT NULL, Date DATETIME NOT NULL)''')
 	insert = "INSERT INTO `users`(`user_id`, `first_name`, `last_name`, `username`, `Date`) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');\
 		".format(user_id, first_name, last_name, user_name, now)
-	print(insert)
 	c.execute(insert)
 	cnn.commit()
 	cnn.close()
