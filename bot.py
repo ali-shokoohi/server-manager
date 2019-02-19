@@ -21,10 +21,7 @@ def join_check(user_id, first_name, last_name, username):
         try:
             write(user_id=user_id, first_name=first_name, last_name=last_name, user_name=username)
             return True
-        except Exception as identifie#Logging
-log_location =  'logs/bot.log'#Loction of log file.
-logging.basicConfig(filename=log_location ,format='%(asctime)s - %(name)s - %(message)s', level=logging.INFO)
-r:
+        except Exception as identifier:
             return identifier
 
 #Handeling commands
