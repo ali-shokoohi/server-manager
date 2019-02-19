@@ -17,7 +17,7 @@ def handle(msg):
         msg_id = msg['message_id']
         if cmd == "/start":
             output = "Working ..."
-            bot.sendMessage(chat_id=chat_id, text=output)
+            bot.sendMessage(chat_id=chat_id, text=output, reply_to_message_id=msg_id)
         else:
             pass #TODO: Handling other commands
     else:
